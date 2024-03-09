@@ -10,7 +10,7 @@ class BaseContact:
     def __repr__(self):
         return self.name
     def contact(self):
-        print(f"I am dialing {self.telephone} and calling {self.name} ")
+        print(f"I am dialing {self.telephone} and calling {self.name} {self.surname}")
     @property
     def label_length(self):
         return len(self.name + self.surname)    
@@ -24,7 +24,7 @@ class BusinessContact(BaseContact):
     def __repr__(self):
         return self.compname
     def contact(self):
-        print(f"I am dialing {self.workphone} and calling {self.compname} {self.position}")
+        print(f"I am dialing {self.workphone} and calling {self.compname} ({self.position})")
     @property
     def label_length(self):
         return len(self.compname)
